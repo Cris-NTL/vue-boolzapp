@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- vue js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Boolzapp</title>
+</head>
+
+<body>
+    <div class="app">
+
+        <div class="container">
+            <!-- sidebar -->
+            <div class="sidebar">
+                <div class="user">
+                    <div class="user-image">
+                        <a href="#"><img src="img/avatar_io.jpg" alt="user-image"></a>
+                    </div>
+                    <div class="icons">
+                        <a href="#"><i class="fa-solid fa-circle-notch"></i></a>
+                        <a href="#"><i class="fa-solid fa-message"></i></a>
+                        <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                    </div>
+                </div>
+                <div class="new-messages user">
+                    <div class="icon">
+                        <a href="#"><i class="fa-solid fa-bell-slash"></i></a>
+                    </div>
+                    <div class="text">
+                        <span>Lorem, ipsum.</span>
+                        <span>Lorem, ipsum.</span>
+                    </div>
+                </div>
+                <div class="search user new-messages">
+                    <div class="icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="input">
+                        <input type="search" placeholder="Search...">
+                    </div>
+                </div>
+                <div class="contact-list">
+
+                </div>
+            </div>
+            <!-- // sidebar -->
+            <!-- main content -->
+            <div class="chat-window">
+                <!-- header main content -->
+                <div class="chat-header">
+                    <div class="left-side">
+                        <div class="contact-img">
+                            <a href="#"><img src="img/avatar_1.jpg" alt="contact-image"></a>
+                        </div>
+                        <div class="contact-text">
+                            <span>Michele</span>
+                            <span>Ultimo accesso</span>
+                        </div>
+                    </div>
+                    <div class="chat-actions">
+                        <a href="#"><i class="fas fa-search"></i></a>
+                        <a href="#"><i class="fa-solid fa-paperclip"></i></a>
+                        <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                    </div>
+                </div>
+                <!-- // header main content -->
+                <!-- chat body -->
+                <div class="chat-content" style="background-image: url('img/mine.jpg');">
+                    <!-- Add your chat messages here row by row-->
+                    <p>Chat messages will appear here. </p>
+                </div>
+                <!-- // chat body -->
+                <!-- input message -->
+                <div class="chat-input">
+                    <!-- Add your chat input field and send button here -->
+                    <a href="#"><i class="fa-solid fa-face-smile"></i></a>
+                    <input type="text" placeholder="Type your message...">
+                    <a href="#"><i class="fa-solid fa-microphone"></i></a>
+                </div>
+                <!-- // input message -->
+            </div>
+            <!-- // main content -->
+        </div>
+
+    </div>
+    <!-- js -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
