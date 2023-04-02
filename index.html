@@ -23,6 +23,7 @@
                 <div class="user">
                     <div class="user-image">
                         <a href="#"><img src="img/avatar_io.jpg" alt="user-image"></a>
+                        <span>Sofia</span>
                     </div>
                     <div class="icons">
                         <a href="#"><i class="fa-solid fa-circle-notch"></i></a>
@@ -48,7 +49,19 @@
                     </div>
                 </div>
                 <div class="contact-list">
-
+                    <div v-for="(contact, index) in contacts">
+                        <div class="left-side">
+                            <div class="">
+                                <img :src="`${contact.image}`" alt="">
+                            </div>
+                            <div class="">
+                                <span>{{contact.name}}</span>
+                            </div>
+                        </div>
+                        <div class="">
+                            <span>{{contact.messages[contact.messages.length -1].date}}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- // sidebar -->
@@ -80,7 +93,6 @@
                 <!-- // chat body -->
                 <!-- input message -->
                 <div class="chat-input">
-                    <!-- Add your chat input field and send button here -->
                     <a href="#"><i class="fa-solid fa-face-smile"></i></a>
                     <input type="text" placeholder="Type your message...">
                     <a href="#"><i class="fa-solid fa-microphone"></i></a>

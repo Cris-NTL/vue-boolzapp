@@ -99,6 +99,14 @@ body {
 .contact-list {
     height: 70%;
     border: 1px solid red;
+    overflow-y: auto;
+}
+
+.contact-list img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* // contact list */
@@ -148,7 +156,7 @@ body {
 .chat-content {
     background-size: cover;
     background-position: center;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     flex-grow: 1;
     padding: 1rem;
     overflow-y: auto;
