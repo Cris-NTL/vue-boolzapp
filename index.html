@@ -49,10 +49,10 @@
                     </div>
                 </div>
                 <div class="contact-list">
-                    <div v-for="(contact, index) in contacts">
+                    <div v-for="(contact, index) in contacts" :key="index">
                         <div class="left-side">
                             <div class="">
-                                <img :src="`${contact.image}`" alt="">
+                                <img :src="`${contact.image}`" alt="" v-on:click="selectContact(contact)">
                             </div>
                             <div class="">
                                 <span>{{contact.name}}</span>
@@ -71,7 +71,7 @@
                 <div class="chat-header">
                     <div class="left-side">
                         <div class="contact-img">
-                            <a href="#"><img src="img/avatar_1.jpg" alt="contact-image"></a>
+                            <img src="img/avatar_1.jpg" alt="contact-image">
                         </div>
                         <div class="contact-text">
                             <span>Michele</span>
@@ -87,8 +87,15 @@
                 <!-- // header main content -->
                 <!-- chat body -->
                 <div class="chat-content" style="background-image: url('img/mine.jpg');">
-                    <!-- Add your chat messages here row by row-->
-                    <p>Chat messages will appear here. </p>
+                    <div v-if="selectedContact" class="flex">
+                        <div v-for="(message, index) in selectedContact.messages.slice()" :key="index"
+                            :class="{ 'sent-message': message.status === 'sent', 'received-message': message.status === 'received' }">
+                            <div class="message-container">
+                                <div class="message-text">{{ message.message }}</div>
+                                <div class="message-date">{{ message.date }}</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- // chat body -->
                 <!-- input message -->

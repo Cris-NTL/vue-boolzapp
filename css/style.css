@@ -107,6 +107,7 @@ body {
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 /* // contact list */
@@ -162,6 +163,36 @@ body {
     overflow-y: auto;
 }
 
+.sent-message {
+    background-color: white;
+    color: black;
+    align-self: flex-start;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 70%;
+}
+
+.received-message {
+    background-color: #DCF8C6;
+    color: black;
+    align-self: flex-end;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 70%;
+}
+
+.message-container {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    max-width: 80%;
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+}
 /* // content */
 /* input message */
 .chat-input {
