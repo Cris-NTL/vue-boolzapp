@@ -13,9 +13,10 @@ img {
 /*  utility */
 .icons a i,
 .new-messages .icon i,
-.search i {
-    color: gray;
-    /* Set the color of the icons to gray */
+.search i,
+.chat-input i,
+.chat-actions i {
+    color: #B1B1B1;
 }
 
 /* // utility */
@@ -56,11 +57,13 @@ body {
     align-items: center;
     height: 10%;
     width: 100%;
-    border: 1px solid red;
 }
 
 .user-image {
     width: 80%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
 }
 
 .user-image img {
@@ -85,7 +88,8 @@ body {
 }
 
 .icon {
-    background-color: #DADBD4;
+    background-color: #ffffff;
+    margin-right: 10px;
     padding: 0.5rem;
     border-radius: 50%;
 }
@@ -94,11 +98,19 @@ body {
     display: block;
 }
 
+.text span:nth-child(1) {
+    font-weight: bold;
+}
+
+.text span:nth-child(2) {
+    color: #B1B1B1;
+    text-decoration: underline;
+}
+
 /* // new messages */
 /* contact list */
 .contact-list {
     height: 70%;
-    border: 1px solid red;
     overflow-y: auto;
 }
 
@@ -189,10 +201,12 @@ body {
     margin: 10px;
     max-width: 80%;
 }
+
 .flex {
     display: flex;
     flex-direction: column;
 }
+
 /* // content */
 /* input message */
 .chat-input {
@@ -214,7 +228,7 @@ body {
 /* // input message */
 
 .chat-input button {
-    background-color: #4caf50;
+    background-color: #D5F9BA;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;

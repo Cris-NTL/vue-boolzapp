@@ -36,8 +36,8 @@
                         <a href="#"><i class="fa-solid fa-bell-slash"></i></a>
                     </div>
                     <div class="text">
-                        <span>Lorem, ipsum.</span>
-                        <span>Lorem, ipsum.</span>
+                        <span>Ricevi notifiche di nuovi messagi</span>
+                        <span>Attiva notifiche desktop</span>
                     </div>
                 </div>
                 <div class="search user new-messages">
@@ -88,7 +88,7 @@
                 <!-- chat body -->
                 <div class="chat-content" style="background-image: url('img/mine.jpg');">
                     <div v-if="selectedContact" class="flex">
-                        <div v-for="(message, index) in selectedContact.messages.slice()" :key="index"
+                        <div v-for="(message, index) in selectedContact.messages" :key="index"
                             :class="{ 'sent-message': message.status === 'sent', 'received-message': message.status === 'received' }">
                             <div class="message-container">
                                 <div class="message-text">{{ message.message }}</div>
