@@ -20,6 +20,7 @@
         <div class="container">
             <!-- sidebar -->
             <div class="sidebar">
+                <!-- user -->
                 <div class="user">
                     <div class="user-image">
                         <a href="#"><img src="img/avatar_io.jpg" alt="user-image"></a>
@@ -31,38 +32,45 @@
                         <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                     </div>
                 </div>
+                <!-- // user -->
+                <!-- new messages notifications -->
                 <div class="new-messages user">
                     <div class="icon">
                         <a href="#"><i class="fa-solid fa-bell-slash"></i></a>
                     </div>
                     <div class="text">
-                        <span>Ricevi notifiche di nuovi messagi</span>
+                        <span>Ricevi notifiche di nuovi messaggi</span>
                         <span>Attiva notifiche desktop</span>
                     </div>
                 </div>
+                <!-- // new messages notifications -->
+                <!-- search -->
                 <div class="search user new-messages">
                     <div class="icon">
                         <i class="fas fa-search"></i>
                     </div>
                     <div class="input">
-                        <input type="search" placeholder="Search...">
+                        <input type="search" placeholder="Cerca o inizia una nuova chat">
                     </div>
                 </div>
+                <!-- // search -->
+                <!-- contact list -->
                 <div class="contact-list">
-                    <div v-for="(contact, index) in contacts" :key="index">
+                    <div v-for="(contact, index) in contacts" :key="index"
+                        v-bind:class="{ 'selected-contact': selectedContact === contact }"
+                        v-on:click="selectContact(contact)">
                         <div class="left-side">
-                            <div class="">
-                                <img :src="`${contact.image}`" alt="" v-on:click="selectContact(contact)">
+                            <div>
+                                <img :src="`${contact.image}`" alt="contact-image">
                             </div>
-                            <div class="">
-                                <span>{{contact.name}}</span>
+                            <div>
+                                <span class="name">{{contact.name}}</span>
+                                <span class="date">{{contact.messages[contact.messages.length -1].date}}</span>
                             </div>
-                        </div>
-                        <div class="">
-                            <span>{{contact.messages[contact.messages.length -1].date}}</span>
                         </div>
                     </div>
                 </div>
+                <!-- // contact list -->
             </div>
             <!-- // sidebar -->
             <!-- main content -->
@@ -101,7 +109,8 @@
                 <!-- input message -->
                 <div class="chat-input">
                     <a href="#"><i class="fa-solid fa-face-smile"></i></a>
-                    <input type="text" placeholder="Type your message...">
+                    <input type="text" placeholder="Scrivi...">
+                    <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
                     <a href="#"><i class="fa-solid fa-microphone"></i></a>
                 </div>
                 <!-- // input message -->

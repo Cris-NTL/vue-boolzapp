@@ -85,6 +85,11 @@ body {
 .new-messages {
     display: flex;
     justify-content: start;
+    cursor: pointer;
+}
+
+.new-messages:hover {
+    background-color: #8EDAFC;
 }
 
 .icon {
@@ -120,6 +125,20 @@ body {
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
+}
+
+.contact-list .name {
+    display: block;
+    font-weight: bold;
+}
+
+.contact-list .date {
+    color: #B1B1B1;
+    font-size: 0.8rem;
+}
+
+.selected-contact {
+    background-color: #b1b1b143;
 }
 
 /* // contact list */
@@ -225,17 +244,10 @@ body {
     outline: none;
 }
 
-/* // input message */
-
-.chat-input button {
-    background-color: #D5F9BA;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    margin-left: 0.5rem;
-    cursor: pointer;
+.fa-microphone {
+    margin-left: 15px;
 }
 
+/* // input message */
 /* // main content section */
-/* specific rules */
+/* // specific rules */
