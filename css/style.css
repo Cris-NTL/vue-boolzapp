@@ -59,6 +59,10 @@ body {
     padding: 0.5rem;
 }
 
+.bg-user {
+    background-color: #EAEAEA;
+}
+
 .user-image {
     width: 80%;
     display: flex;
@@ -69,6 +73,7 @@ body {
 .user-image img {
     width: 40px;
     height: 40px;
+    margin-right: 10px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -121,6 +126,7 @@ body {
 
 .search input {
     width: 100%;
+    padding: 0.5rem 0;
     border: none;
 }
 
@@ -129,7 +135,10 @@ body {
 .contact-list {
     height: 70%;
     overflow-y: auto;
-    padding: 0.5rem;
+}
+
+.contact-list * {
+    cursor: pointer;
 }
 
 .contact-list img {
@@ -139,6 +148,7 @@ body {
     object-fit: cover;
     cursor: pointer;
     margin-bottom: 0.5rem;
+    margin-right: 10px;
 }
 
 .contact-list .name {
@@ -152,7 +162,7 @@ body {
 }
 
 .selected-contact {
-    background-color: #b1b1b143;
+    background-color: #EAEAEA;
 }
 
 /* // contact list */
@@ -171,7 +181,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f6f6f6;
+    background-color: #EAEAEA;
     padding: 1rem;
     border-bottom: 1px solid #ddd;
 }
@@ -190,6 +200,7 @@ body {
 .left-side {
     display: flex;
     align-items: center;
+    padding: 0.5rem;
 }
 
 .chat-actions {
@@ -242,7 +253,7 @@ body {
 /* // content */
 /* input message */
 .chat-input {
-    background-color: #f6f6f6;
+    background-color: #EAEAEA;
     height: 10%;
     padding: 1rem;
     display: flex;

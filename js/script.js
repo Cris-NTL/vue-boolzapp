@@ -3,8 +3,12 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+
+            // empty variables (result of functions)
             selectedContact: null,
             newMessage: '',
+            
+            // object array
             contacts: [
                 {
                     name: 'Michele',
@@ -172,9 +176,13 @@ createApp({
         }
     },
     methods: {
+        
+        // function to select a contact 
         selectContact(contact) {
             this.selectedContact = contact;
         },
+
+        // function to send a new message
         sendMessage() {
             if (this.newMessage) {
                 this.selectedContact.messages.push({
@@ -182,8 +190,11 @@ createApp({
                     message: this.newMessage,
                     status: 'sent',
                 });
+
+                // cleans the input
                 this.newMessage = '';
 
+                //timeout function to receive an 'ok!' response
                 setTimeout(() => {
                     this.selectedContact.messages.push({
                         date: 'adesso',
