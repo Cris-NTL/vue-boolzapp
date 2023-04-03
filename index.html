@@ -109,8 +109,8 @@
                 <!-- input message -->
                 <div class="chat-input">
                     <a href="#"><i class="fa-solid fa-face-smile"></i></a>
-                    <input type="text" placeholder="Scrivi...">
-                    <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
+                    <input type="text" placeholder="Scrivi..." v-model="newMessage" @keyup.enter="sendMessage">
+                    <a href="#" @click="sendMessage"><i class="fa-solid fa-paper-plane"></i></a>
                     <a href="#"><i class="fa-solid fa-microphone"></i></a>
                 </div>
                 <!-- // input message -->

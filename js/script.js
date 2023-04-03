@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             selectedContact: null,
+            newMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -173,7 +174,32 @@ createApp({
     methods: {
         selectContact(contact) {
             this.selectedContact = contact;
-        }
+        },
+        sendMessage() {
+            if (this.newMessage) {
+                this.selectedContact.messages.push({
+                    date: 'adesso',
+                    message: this.newMessage,
+                    status: 'sent',
+                });
+                this.newMessage = '';
+
+                setTimeout(() => {
+                    this.selectedContact.messages.push({
+                        date: 'adesso',
+                        message: 'Ok!',
+                        status: 'received',
+                    });
+                }, 1000);
+            }
+
+        },
+
+
     }
 
 }).mount(".app");
+
+// const dt = luxon.DateTime;
+// console.log(dt.now().setLocale('it')
+//.toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS));
