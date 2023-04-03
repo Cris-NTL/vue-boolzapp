@@ -186,7 +186,7 @@ createApp({
         sendMessage() {
             if (this.newMessage) {
                 this.selectedContact.messages.push({
-                    date: 'adesso',
+                    date: '',
                     message: this.newMessage,
                     status: 'sent',
                 });
@@ -197,7 +197,7 @@ createApp({
                 //timeout function to receive an 'ok!' response
                 setTimeout(() => {
                     this.selectedContact.messages.push({
-                        date: 'adesso',
+                        date: '',
                         message: 'Ok!',
                         status: 'received',
                     });
@@ -206,7 +206,3 @@ createApp({
         },
     }
 }).mount(".app");
-
-// const dt = luxon.DateTime;
-// console.log(dt.now().setLocale('it')
-//.toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS));

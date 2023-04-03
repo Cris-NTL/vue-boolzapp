@@ -65,11 +65,7 @@
                             </div>
                             <div>
                                 <span class="name">{{contact.name}}</span>
-                                <span class="message"
-                                    v-if="contact.messages.some(message => message.status === 'received')">
-                                    {{ contact.messages.filter(message => message.status ===
-                                    'received').slice(-1)[0].message }}
-                                </span>
+                                <span class="message">{{ contact.messages.slice(-1)[0].message }}</span>
                             </div>
                         </div>
                     </div>
