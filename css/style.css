@@ -11,12 +11,18 @@ img {
 
 /* // reset */
 /*  utility */
-.icons a i,
+.icons i,
 .new-messages .icon i,
 .search i,
 .chat-input i,
 .chat-actions i {
     color: #B1B1B1;
+    list-style-type: none;
+}
+
+.icons li,
+.chat-actions li {
+    list-style-type: none;
 }
 
 /* // utility */
@@ -189,12 +195,13 @@ body {
 .contact-img img {
     width: 40px;
     height: 40px;
+    margin-right: 10px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .contact-text span {
-    display: block;
+    font-weight: bold;
 }
 
 .left-side {
