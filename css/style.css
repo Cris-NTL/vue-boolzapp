@@ -162,7 +162,7 @@ body {
     font-weight: bold;
 }
 
-.contact-list .date {
+.contact-list .message {
     color: #B1B1B1;
     font-size: 0.8rem;
 }
@@ -242,10 +242,11 @@ body {
 }
 
 .message-container {
-    padding: 10px;
-    border-radius: 10px;
+    padding: 5px;
     margin: 10px;
-    max-width: 80%;
+    max-width: 90%;
+    display: flex;
+    align-items: flex-end;
 }
 
 .flex {
@@ -255,6 +256,8 @@ body {
 
 .message-date {
     font-size: 0.6rem;
+    margin-left: 5rem;
+    color: #B1B1B1;
 }
 
 /* // content */

@@ -65,7 +65,11 @@
                             </div>
                             <div>
                                 <span class="name">{{contact.name}}</span>
-                                <span class="date">{{contact.messages[contact.messages.length -1].date}}</span>
+                                <span class="message"
+                                    v-if="contact.messages.some(message => message.status === 'received')">
+                                    {{ contact.messages.filter(message => message.status ===
+                                    'received').slice(-1)[0].message }}
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -99,7 +103,7 @@
                             :class="{ 'sent-message': message.status === 'sent', 'received-message': message.status === 'received' }">
                             <div class="message-container">
                                 <div class="message-text">{{ message.message }}</div>
-                                <div class="message-date">{{ message.date }}</div>
+                                <div class="message-date">{{ message.date.slice(11, 16) }}</div>
                             </div>
                         </div>
                     </div>

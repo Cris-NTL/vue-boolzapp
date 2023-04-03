@@ -7,7 +7,7 @@ createApp({
             // empty variables (result of functions)
             selectedContact: null,
             newMessage: '',
-            
+
             // object array
             contacts: [
                 {
@@ -176,7 +176,7 @@ createApp({
         }
     },
     methods: {
-        
+
         // function to select a contact 
         selectContact(contact) {
             this.selectedContact = contact;
@@ -203,12 +203,8 @@ createApp({
                     });
                 }, 1000);
             }
-
         },
-
-
     }
-
 }).mount(".app");
 
 // const dt = luxon.DateTime;
