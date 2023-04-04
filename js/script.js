@@ -13,6 +13,7 @@ createApp({
             selectedContact: null,
             newMessage: '',
             searchTerm: '',
+            showOptionsList: false,
 
             // object array
             contacts: [
@@ -211,6 +212,11 @@ createApp({
                 }, 1000);
             }
         },
+
+        // function to show the options list
+        toggleOptionsList() {
+            this.showOptionsList = !this.showOptionsList;
+        }
     },
 
     computed: {

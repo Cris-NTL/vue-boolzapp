@@ -102,10 +102,15 @@
                             <div class="message-container">
                                 <div class="message-text">{{ message.message }}</div>
                                 <div class="right-side">
-                                    <div class="message-option">
+                                    <div class="message-option" @click="toggleOptionsList">
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </div>
                                     <div class="message-date">{{ message.date.slice(11, 16) }}</div>
+                                    <!-- options -->
+                                    <div class="message-options-list" v-show="showOptionsList">
+                                        <a href="#"><span>Elimina messaggio</span></a>
+                                    </div>
+                                    <!-- // options -->
                                 </div>
                             </div>
                         </div>
