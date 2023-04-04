@@ -214,6 +214,8 @@ createApp({
     },
 
     computed: {
+
+        // function to filter array and compare with searchTerm
         filteredContacts() {
             return this.contacts.filter(contact => {
                 const regex = new RegExp(this.searchTerm, 'i');
