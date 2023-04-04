@@ -1,11 +1,9 @@
 const { createApp } = Vue;
 
+// luxon variables
 const now = luxon.DateTime.now();
-
 const timeNow = now.toFormat("dd/MM/yyyy hh:mm:ss")
-console.log(timeNow);
 const messageDate = luxon.DateTime.fromFormat("10/01/2020 15:30:55", "dd/MM/yyyy HH:mm:ss")
-console.log(messageDate.toFormat("HH:mm"));
 
 createApp({
     data() {
@@ -14,6 +12,7 @@ createApp({
             // empty variables (result of functions)
             selectedContact: null,
             newMessage: '',
+            searchTerm: '',
 
             // object array
             contacts: [
@@ -182,6 +181,7 @@ createApp({
 
         }
     },
+
     methods: {
 
         // function to select a contact 
@@ -205,11 +205,20 @@ createApp({
                 setTimeout(() => {
                     this.selectedContact.messages.push({
                         date: luxon.DateTime.now().toFormat("dd/MM/yyyy HH:mm:ss"),
-                        message: 'Ok!',
+                        message: 'Va bene! \uD83D\uDE01',
                         status: 'received',
                     });
                 }, 1000);
             }
         },
+    },
+
+    computed: {
+        filteredContacts() {
+            return this.contacts.filter(contact => {
+                const regex = new RegExp(this.searchTerm, 'i');
+                return regex.test(contact.name);
+            });
+        }
     }
 }).mount(".app");

@@ -52,13 +52,13 @@
                         <i class="fas fa-search"></i>
                     </div>
                     <div class="input">
-                        <input type="search" placeholder="Cerca o inizia una nuova chat">
+                        <input type="search" placeholder="Cerca o inizia una nuova chat" v-model="searchTerm">
                     </div>
                 </div>
                 <!-- // search -->
                 <!-- contact list -->
                 <div class="contact-list">
-                    <div v-for="(contact, index) in contacts" :key="index"
+                    <div v-for="(contact, index) in filteredContacts" :key="index"
                         v-bind:class="{ 'selected-contact': selectedContact === contact }"
                         v-on:click="selectContact(contact)">
                         <div class="left-side">
