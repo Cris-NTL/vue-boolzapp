@@ -4,7 +4,7 @@ const now = luxon.DateTime.now();
 
 const timeNow = now.toFormat("dd/MM/yyyy hh:mm:ss")
 console.log(timeNow);
-const messageDate = luxon.DateTime.fromFormat("10/01/2020 15:30:55", "dd/MM/yyyy hh:mm:ss")
+const messageDate = luxon.DateTime.fromFormat("10/01/2020 15:30:55", "dd/MM/yyyy HH:mm:ss")
 console.log(messageDate.toFormat("HH:mm"));
 
 createApp({
@@ -193,7 +193,7 @@ createApp({
         sendMessage() {
             if (this.newMessage) {
                 this.selectedContact.messages.push({
-                    date: luxon.DateTime.now().toFormat("dd/MM/yyyy hh:mm:ss"),
+                    date: luxon.DateTime.now().toFormat("dd/MM/yyyy HH:mm:ss"),
                     message: this.newMessage,
                     status: 'sent',
                 });
@@ -204,7 +204,7 @@ createApp({
                 //timeout function to receive an 'ok!' response
                 setTimeout(() => {
                     this.selectedContact.messages.push({
-                        date: luxon.DateTime.now().toFormat("dd/MM/yyyy hh:mm:ss"),
+                        date: luxon.DateTime.now().toFormat("dd/MM/yyyy HH:mm:ss"),
                         message: 'Ok!',
                         status: 'received',
                     });
